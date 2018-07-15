@@ -1,0 +1,787 @@
+/*common*/
+
+body{
+	font-size: 15px;
+	color: #565656;
+	line-height: 15px;
+    font-family: 'Roboto', sans-serif;
+
+}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+	margin:0;
+	display: block;
+}
+p{
+	display:block;
+	margin:0;
+	padding:0;
+}
+section{
+	position:relative;
+}
+blockquote{
+	padding:0;
+	margin:0;
+	border:0;
+}
+a,a:hover,a:active,a:focus{
+	text-decoration: none;
+	outline: none;
+}
+img{
+	vertical-align: middle;
+	max-width: 100%;
+}
+ul,li{
+	padding:0;
+	margin:0;
+	list-style: none;
+}
+
+/*social*/
+#social{
+	background: #000;
+	padding:10px 0;
+}
+.social-left{
+	float:left;
+}
+.social-left ul{
+	list-style: none;
+}
+.social-left ul li{
+	display: inline-block;
+}
+.social-left ul li a{
+	color:#fff;
+	font-size:12px;
+	padding: 0 2.5px;
+	transition: all 0.5s;
+	-webkit-transition:all 0.5s;
+	-o-transition:all 0.5s;
+}
+.social-left ul li a:hover{
+	color:#82ca9c;
+}
+.social-right{
+	float:right;
+}
+.social-right:after{
+	content:"";
+	clear:both;
+	display:block;
+}
+.social-right a{
+	color:#fff;
+	font-size:12px;
+	display:inline-block;
+	transition: all 0.5s;
+	-webkit-transition:all 0.5s;
+	-o-transition:all 0.5s;
+	padding: 0 2.5px;
+}
+.social-right a:hover{
+	color:#82ca9c;
+}
+.social-right a i{
+	padding-right: 5px;
+}
+.social-right .padding-right{
+	padding-right:20px;
+}	
+
+
+/*导航栏*/
+
+.my-navbar{
+	padding-top:20px;
+}
+.navbar img{
+	max-width:100%;
+}
+.my-navbar .icon-bar{
+	background:#82ca9c;
+}
+.my-navbar .navbar-brand{
+	padding:7px 0;
+}
+.navbar-right li a{
+	color:#000;
+	padding:15px 15px;
+	background:transparent;
+	text-transform: uppercase;
+	font-size:12px;
+	transition:all 0.5s;
+	-o-transition:all 0.5s;
+	-webkit-transition:all 0,5s;
+	font-weight: 600;
+}
+.my-navbar .login a{
+	color:#82ca9c;
+	border:1px solid #82ca9c;
+	background:transparent;
+	padding:5px 35px; 
+	border-radius: 20px;           /*像素和百分比不一样，圆形用百分比，边角圆角用px*/
+	text-transform: uppercase;
+	font-size: 10px;
+	margin:10px 0 0 20px;
+	transition:all 0.5s;
+	-o-transition:all 0.5s;
+	-webkit-transition:all 0,5s;
+	font-weight: 600;
+	width:123px;
+}
+.my-navbar .navbar-right li a:hover,.my-navbar .navbar-right li a:active,
+.my-navbar .navbar-right li a:focus,.my-navbar .navbar-right li.active a{   
+	                                                      /* li.active a 权重覆盖*/
+	color:#82ca9c;
+	background-color:transparent;
+
+}
+
+.my-navbar .navbar-right .login a:hover{
+	color:#fff;
+	background:#82ca9c;
+
+}
+
+/*banner*/
+
+#banner{
+	background: url(../images/homebg.jpg) no-repeat center center;
+	                                        /*相对当前文件的上一级（当前css上一级css文件件）*/
+	background-size: cover;
+}
+.banner-bg-color{
+	width:100%;
+	background: rgba(0,0,0,0.30);
+}
+.banner-content{
+	padding:120px 0;
+	text-align: center;
+	color:#fff;
+}
+.banner-content h1{
+	padding-bottom:50px;
+	font-size: 48px;
+	font-weight: 700;
+}
+.banner-content p{
+	padding-bottom:150px;
+	font-size: 17px;
+	line-height:24px;
+}
+.email-messages{}
+.email-messages input{
+	width:300px;
+	height:59px;
+	padding-left:10px;
+	margin:0;
+	border:0;
+	display: inline-block;
+}
+.email-messages input[type="text"]{
+	color:#82ca9c;
+	font-size: 15px;
+}
+.email-messages a{
+	padding:22px 45px;
+	background:#82ca9c;
+	color:#fff;
+	margin-left:-12px;
+	display: inline-block;
+	transition:all 0.5s;
+	-o-transition:all 0.5s;
+	-webkit-transition:all 0,5s;
+}
+.email-messages a:hover{
+	background: rgba(0, 173, 62, 0.75);
+}
+
+/*产品展示页面*/
+
+#product{
+	padding:100px 0;
+}
+.product-content{
+	padding-top:45px;
+}
+.product-text{
+	vertical-align: middle;
+}
+.product-img{
+	vertical-align: middle;
+}
+.product-text h1{
+	padding-bottom:25px;
+	text-align: left;
+	font-size: 42px;
+	color:#000;
+}
+.product-text p{
+	padding-top:30px;
+	text-align:left;
+	font-size: 18px;
+	line-height:22px;
+}
+.product-text a{
+	padding:18px 20px;
+	width:160px;
+	height:50px;
+	color:#fff;
+	background:#82ca9c;
+	display: inline-block;                /*display:bolck;会占据宽度的100%。inline-block不会 */
+	margin-top: 30px;
+	text-align:center;
+	-o-transition:all 0.5s;
+	-webkit-transition:all 0.5s;
+	transition:all 0.5s;
+}
+.product-text a:hover{
+	background:rgba(0, 173, 62, 0.75);
+}
+
+/*service*/
+
+/* .service-content-card,.service-content-pen,.service-content-photo,.service-content-envelope{
+	margin-left: 65px;
+}
+.service-content h3{
+	padding-top:25px;
+}
+.service-content p{
+	padding-top:25px;
+	color:#777;
+}
+.service-content-card:before{
+	content:"";
+	display: table;
+	background: url(../images/flaticon1.png) no-repeat center center;
+	background-size: contain;
+	height:80px;
+	width:80px;
+	position:absolute;
+	top:50%;
+	transform:translate(-120%,-50%);
+}
+.service-content-pen:before{
+	content:"";
+	display: table;
+	background: url(../images/flaticon2.png) no-repeat center center;
+	background-size: contain;
+	height:80px;
+	width:80px;
+	position:absolute;
+	top:50%;
+	transform:translate(-120%,-50%);
+}
+.service-content-photo:before{
+	content:"";
+	display: table;
+	background: url(../images/flaticon3.png) no-repeat center center;
+	background-size: contain;
+	height:80px;
+	width:80px;
+	position:absolute;
+	top:50%;
+	transform:translate(-120%,-50%);
+}
+.service-content-envelope:before{
+	content:"";
+	display: table;
+	background: url(../images/flaticon4.png) no-repeat center center;
+	background-size: contain;
+	height:80px;
+	width:80px;
+	position:absolute;
+	top:50%;
+	transform:translate(-120%,-50%);
+} */
+/*service*/
+
+#service{
+	background: #f9f9f9;
+	padding:120px 0;
+}
+.service-header{
+	text-align:center;
+}
+.service-header h1{}
+.service-header p{
+	font-size: 18px;
+	padding-top:25px;
+}
+.service-content{
+	padding-top: 100px;
+	padding-left:50px;
+}
+.service-content-img{
+	display: inline-block;
+	width:70px;
+	vertical-align: middle;              /*垂直居中，两边都要用vertical-align*/
+	margin-left:25px;
+}	
+.service-content-img img{}
+.service-content-text{
+	display: inline-block;
+	margin: 25px 0;
+	width:70%;
+	padding-left:25px;
+	vertical-align: middle;              /*垂直居中，两边都要用vertical-align*/
+}
+.service-content-text h3{
+	font-size: 24px;
+	line-height: 22px;
+	color:#000;
+}
+.service-content-text p{
+	padding-top: 15px;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+
+/*price*/
+
+
+#price{
+	padding:100px 0;
+}
+.price-header{
+	text-align: center;
+}
+.price-header h1{
+	font-size:45px; 
+	font-weight: 500;
+}
+.price-header p{
+	padding-top:25px;
+	font-size: 16px;
+	font-weight: 500;
+}
+.price-package{
+	padding:50px 0;
+}
+.price-header h1{
+	transition: all 1s;
+}
+.price-package p{
+	background:#82ca9c;
+	border-radius: 50px;
+	width: 250px;
+	height:45px;
+	display: table;
+	margin:0 auto; 
+	position:relative;
+}
+.price-package p label{
+	font-size: 14px;
+	line-height: 40px;
+	height: 45px;
+	width:125px;
+	text-align: center;
+	color:#fff;
+	z-index: 2;
+	cursor:pointer;
+	margin:0;
+
+}
+.price-package p #lab-one{
+	position: absolute;
+	top:0;
+	left: 0;
+	transition: all 1s;
+}
+.price-package p #lab-two{
+	position: absolute;
+	top:0;
+	left:125px;
+	transition: all 1s;
+}
+#sp{
+	background-color:#0c1f28;
+	width:123px;
+	height:40px;
+	border-radius: 25px;
+	z-index: 1;
+	display: table;
+	position:absolute;
+	top:2.5px;
+	left: 2px; 
+	transition: all 0.5s;           /*z-index只在定位元素上有用,可以查询z-index失效问题*/
+}
+                              /*hover属性控制兄弟元素要加+号(注释注意不要放在样式中！！！)*/
+/* #lab-one:hover + #sp{ 
+	transform: translateX(125px);
+} */
+
+#price-content,#popular-content,#premire-content{
+
+	/*position: relative;*/
+	transition:all 0.5s;
+	/*transform-origin: center;*/
+	text-align: center;
+    outline: 1px solid #ededed;
+    margin-top:25px;
+
+}
+
+#basic-show,#basic-hidden,#popular-show,#popular-hidden,#premire-show,#premire-hidden,{
+	transition:all 0.5s;
+	/*backface-visibility:hidden;*/
+	/*position: absolute;*/
+	display: block;
+	text-align: center;
+	list-style: none;
+}
+.basic-top,.premire-top,.popular-top{
+	border:1.5px solid #82ca9c;
+	color:#000;
+}
+.basic-top-header,.premire-top-header,.popular-top-header{
+	font-size: 15px;
+	font-weight: 600;
+	padding-top: 25px;
+}
+.basic-price,.popular-price,.premire-price{
+	padding: 25px 0;
+}
+.basic-price span,.popular-price span,.premire-price span{
+	display: inline-block;
+	font-size: 25px;
+	font-size: 300;
+}
+.basic-price .spanOne,.popular-price .spanOne,.premire-price .spanOne{
+	font-weight: 800;
+	font-size: 25px;
+}
+.basic-price .spanThree,.popular-price .spanThree,.premire-price .spanThree{
+	font-size: 18px;
+	font-weight: 600;
+}
+.basic-price .spanThree:before,.popular-price .spanThree:before,
+.premire-price .spanThree:before{
+	content:"/";
+	margin-right: 2px;
+}
+#basic-hidden,#popular-hidden,#premire-hidden{
+	transform:/* translateY(0%) */ rotateY(180deg);
+	/*backface-visibility:hidden;*/
+	/*position: absolute;*/
+	/*top:0;*/
+	/*left:0;*/
+	display: none;
+}
+
+#basic-top{}
+
+.basic-feature li{
+	padding:18px 0;
+	display: block;
+}
+
+.glyphicon-ok:before{
+	margin-right: 8px;
+	color:#82ca9c;
+}
+.glyphicon-remove:before{
+	margin-right: 8px;
+	color:red;
+}
+
+.basic-bom a,.popular-bom a,.premire-bom a{
+	display:block;
+	background: #82ca9c;
+	padding:25px;
+	font-size: 16px;
+	color:#fff;
+	font-weight: 500;
+	transition: all 1s;
+}
+.basic-bom a:hover,.popular-bom a:hover,.premire-bom a:hover{
+	color:#000;
+}
+
+
+/*business 页面*/
+
+#business{
+	padding:100px 0;
+	background: rgb(242, 242, 242);
+}
+
+.business-header{
+	text-align: center;
+}
+.business-header h1{
+	font-size: 45px;
+}
+.business-header p{
+	padding:25px 0;
+	font-size: 20px;
+	line-height: 24px;
+}
+.businessContent{
+	margin:15px 0;
+	text-align: center;
+	border:1px solid #ededed;
+	background: #fff;
+	padding:0 15px;
+	box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
+	transition:all 0.5s;
+}
+.businessContent .glyphicon{
+	font-size: 60px;
+	color:#82ca9c;
+	padding-top:25px;
+	transition:all 0.5s;
+}
+.businessContent .divider{
+	width:35%;
+	padding:1px;
+	background:#ededed;
+	margin:25px auto 0;
+	transition:all 0.5s; 
+}
+.businessContent h4 {
+	color: #000;
+	padding-top:25px;
+	font-weight: 600;
+	transition:all 0.5s;
+}
+
+.businessContent p {
+	padding:25px 0; 
+	color:#777777;
+	font-size: 14px;
+	line-height: 17px;
+	transition:all 0.5s;
+}
+
+.businessContent:hover{
+	background: #82ca9c;
+}
+.businessContent:hover .divider{
+	background: #fff;
+}
+.businessContent:hover h4{
+	color:#fff;
+}
+.businessContent:hover p{
+	color:#fff;
+}
+.businessContent:hover .glyphicon{
+	color: #fff;
+}
+
+/*contact页面*/
+#contact{
+	padding:100px 0;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+}
+.contactHeader {
+	text-align: center;
+}
+
+.contactHeader h1 {
+	padding-top: 25px;
+}
+
+.contactHeader p {
+	padding-top: 25px;
+	line-height: 20px;
+	font-size: 16px;
+}
+
+.contactForm {
+	padding-top: 50px;
+	width:80%;
+	float:right;
+}
+.contactForm .form-control{
+	border-radius: 0px;
+}
+.contactForm .form-control:focus{
+	border-color:#82ca9c;
+	box-shadow: 0 0 8px #82ca9c;
+}
+
+.contactForm input[type="text"] {
+	margin-top:25px;
+	height:45px;
+}
+.contactForm input[type="submit"]{
+	margin-top:25px;
+	padding:18px 60px;
+	background: #82ca9c;
+	color:#ededed;
+	border:none;
+	font-size: 17px;
+	transition:all 0.3s;
+}
+.contactForm input[type="submit"]:hover{
+	background:rgba(0, 173, 62, 0.75);
+	color:#fff;
+}
+.contactForm textarea{
+	margin-top:25px;
+	font-size: 16px;
+}
+.formMessages {
+	padding-top: 50px;
+	width:80%;
+	float:left;
+}
+
+.formMessages p {
+	padding-top: 25px;
+	line-height: 20px;
+	font-size: 16px;
+}
+
+.formMessages span {
+	padding-top: 25px;
+	font-size: 17px;
+	display: block
+}
+
+.formMessages .contactWay {
+	padding-top: 25px;
+	list-style: none;
+}
+
+.formMessages .contactWay li {
+	display: inline-block;
+	margin-top: 15px;
+}
+
+.formMessages .contactWay li a {
+	padding: 12px;
+	border: 1px solid #565656;
+	border-radius: 50%;
+	margin-right: 10px;
+	transition: all 0.3s;
+}
+
+.formMessages .contactWay li a i {
+	color: #000;
+	transition:all 0.3s;
+}
+.formMessages .contactWay li a:hover i{
+	color: #8a3b6a;
+}
+.formMessages .contactWay li a:hover{
+	border:1px solid #8a3b6a;
+}
+
+/*footer底部栏*/
+
+#footerBottom{
+	padding:100px 0;
+	background: #efefef;
+    color: #000;
+    border-bottom: 1px solid #cfcdcd;
+}
+.footerBottom-item{}
+.footerBottom-item h3{
+	padding-bottom: 22px;
+	font-size:20px;
+	font-weight: 500;
+}
+.footerBottom-item p{
+	padding-bottom: 12px;
+	font-weight: 300;
+	color:#565656;
+	font-size: 13px;
+}
+.footerBottom-item input{
+	height:40px;
+	display: inline-block;
+	transition:all 1s;
+	width:58%;
+}
+.footerBottom-item input:focus{
+	border-color:#82ca9c;
+	box-shadow: 0 0 8px #82ca9c;
+}
+.footerBottom-item a{
+	padding:12px 12px;
+	color:#ededed;
+	display: inline-block;
+	transform: translateX(-12px);
+	transition:all 1s;
+	background:#82ca9c; 
+}
+.footerBottom-item a:hover{
+	background:rgba(0, 173, 62, 0.75); 
+}
+
+
+
+@media only screen and (max-width: 375px) {
+	.social-right{
+		float:left;
+		padding-top:5px;
+	}
+}
+
+
+@media only screen and (max-width: 1200px) {}
+
+
+@media only screen and (max-width: 990px) {
+	.product-text h1{
+		padding-bottom:15px;
+	}
+	.product-text p{
+		padding-top:15px;
+	}	
+	.product-text a{
+		margin-top: 18px;
+	}
+	.contactForm {
+	width:100%;
+	}
+	.formMessages {
+	width:100%;
+	}
+	.footerBottom-item a{
+	transform: translateX(-12px);
+	padding:12px 8px;
+	}
+}
+
+
+@media only screen and (max-width: 768px) {
+	.container{
+		padding:0 30px;
+	}
+	.collapse .login a{
+		margin-left:14px;
+		width:123px;
+	}
+	.email-messages input{
+	width:200px;
+	}
+	.email-messages a{
+	padding:22px 25px;
+	}
+	.service-content{
+		padding-left:0px;
+		padding-top: 50px;
+	}
+
+	#popular-content,#premire-content{
+		margin-top:30px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.email-messages input{ 
+	width:145px;
+	}
+	.email-messages a{
+	padding:22px 12px;
+	}
+}                                            /* 媒体查询也要注意先后 */

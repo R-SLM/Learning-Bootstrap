@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多个元素依次显示</title>
+	
+<style type="text/css">
+	.container {
+	  width: 100px;
+	  margin: 0 auto;
+	}
+	.aninode {
+	  visibility: hidden;
+	}
+	.animated .aninode {
+	  visibility: visible;
+	}
+	.target {
+	  width: 100px;
+	  height: 100px;
+	  background: orange;
+	  border-radius: 4px;
+	  margin: 20px 0;
+	}
+	.animated .topIn {
+	  animation: topIn 1s ease;
+	}
+	.animated .leftIn {
+	  animation: leftIn 1s ease;
+	}
+	.btn {
+	  width: 100px;
+	  height: 30px;
+	  border: 1px solid #ccc;
+	  outline: none;
+	  transition: 0.1s;
+	}
+	.btn:active {
+	  border: none;
+	  background: orange;
+	  color: #fff;
+	}
+	@keyframes topIn {
+	  from { 
+	    transform: translateY(-50px);
+	    opacity: 0; 
+	  }
+	  to { 
+	    transform: translateY(0px);
+	    opacity: 1; 
+	  }
+	}
+	@keyframes leftIn {
+	  from { 
+	    transform: translateX(-50px);
+	    opacity: 0; 
+	  }
+	  to { 
+	    transform: translateX(0px);
+	    opacity: 1; 
+	  }
+	}
+</style>
+
+</head>
+<body>
+	<div class="container">
+	  <div class="target aninode leftIn"></div>
+	  <button class="btn show">show</button>
+	  <button class="btn hide">hide</button>
+	</div>
+<script type="text/javascript">
+		var show = document.querySelector('.show');
+		var hide = document.querySelector('.hide');
+		var container = document.querySelector('.container');
+		show.addEventListener('click', function() {
+			container.classList.add('animated');
+		}, !1);
+		hide.addEventListener('click', function() {
+			container.classList.remove('animated');
+		}, !1);
+</script>
+	</body>
+</html>

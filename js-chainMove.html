@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js链式运动框架</title>
+</head>
+<body>
+	<!-- 必须是定位元素？？ -->
+	
+	<script>  
+	function startMove(obj,attr,iTarget,fnEnd)  
+	{  
+	    clearInterval(obj.timer);  //清除当前对象的定时器  
+	    obj.timer=setInterval(function(){  //定义当前对象的定时器  
+	        var cur=0;  
+	              
+	        if(attr=='opacity'){  //如果attr属性是opacity时  
+	            cur=Math.round(parseFloat(getStyle(obj,attr))*100);  //opacity要用parseFloat强制转换为浮点数才能起作用，因为浮点数习惯用整数表示所以乘以100。因为有些小数*100在计算机中会出现bug，会出现算不尽的数，所以要用Math.round()来四舍五入。  
+	        }  
+	        else{  
+	            cur=parseInt(getStyle(obj,attr));   //把从对象获取到的属性值强制转换为整形  
+	        }  
+	          
+	        var speed=(iTarget-cur)/6;  /*缓冲运动，定值就是匀速*/
+	        
+	        speed=speed>0?Math.ceil(speed):Math.floor(speed);  //用三目运算符，当速度大于0就向上取整，否则就向下取整，这样能避免缓冲运动出现bug  
+	          
+	        if(cur==iTarget){  
+	            clearInterval(obj.timer);  
+	            if(fnEnd)fnEnd();  
+	        }   
+	        else{  
+	            if(attr=='opacity'){  
+	                obj.style.filter='alpha(opacity:'+(cur+speed)+')';  //IE  
+	                obj.style.opacity=(cur+speed)/100;  
+	                  
+	                document.getElementById('txt1').value=obj.style.opacity;  
+	            }  
+	            else{  
+	                obj.style[attr]=cur+speed+'px';   
+	            }  
+	        }  
+	    },30);  
+	};  
+	</script> 
+</body>
+</html>
