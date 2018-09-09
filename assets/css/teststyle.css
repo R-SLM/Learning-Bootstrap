@@ -1,3 +1,7 @@
+/*test-3d-rotateY()*/
+
+.show-3d-totate{}
+
 /*common*/
 
 body{
@@ -56,9 +60,9 @@ ul,li{
 	color:#fff;
 	font-size:12px;
 	padding: 0 2.5px;
-	transition: all 0.5s;
-	-webkit-transition:all 0.5s;
-	-o-transition:all 0.5s;
+	-webkit-transition: all 2s;
+	-moz-transition: all 2s;
+	transition: all 2s;
 }
 .social-left ul li a:hover{
 	color:#82ca9c;
@@ -75,9 +79,9 @@ ul,li{
 	color:#fff;
 	font-size:12px;
 	display:inline-block;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
 	transition: all 0.5s;
-	-webkit-transition:all 0.5s;
-	-o-transition:all 0.5s;
 	padding: 0 2.5px;
 }
 .social-right a:hover{
@@ -111,9 +115,9 @@ ul,li{
 	background:transparent;
 	text-transform: uppercase;
 	font-size:12px;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
 	transition:all 0.5s;
-	-o-transition:all 0.5s;
-	-webkit-transition:all 0,5s;
 	font-weight: 600;
 }
 .my-navbar .login a{
@@ -121,13 +125,14 @@ ul,li{
 	border:1px solid #82ca9c;
 	background:transparent;
 	padding:5px 35px; 
-	border-radius: 20px;           /*像素和百分比不一样，圆形用百分比，边角圆角用px*/
+	-moz-border-radius: 20px; 
+	     border-radius: 20px; /*像素和百分比不一样，圆形用百分比，边角圆角用px*/
 	text-transform: uppercase;
 	font-size: 10px;
 	margin:10px 0 0 20px;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
 	transition:all 0.5s;
-	-o-transition:all 0.5s;
-	-webkit-transition:all 0,5s;
 	font-weight: 600;
 	width:123px;
 }
@@ -150,7 +155,8 @@ ul,li{
 #banner{
 	background: url(../images/homebg.jpg) no-repeat center center;
 	                                        /*相对当前文件的上一级（当前css上一级css文件件）*/
-	background-size: cover;
+	-moz-background-size: cover;
+	     background-size: cover;
 }
 .banner-bg-color{
 	width:100%;
@@ -190,9 +196,9 @@ ul,li{
 	color:#fff;
 	margin-left:-12px;
 	display: inline-block;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
 	transition:all 0.5s;
-	-o-transition:all 0.5s;
-	-webkit-transition:all 0,5s;
 }
 .email-messages a:hover{
 	background: rgba(0, 173, 62, 0.75);
@@ -233,8 +239,8 @@ ul,li{
 	display: inline-block;                /*display:bolck;会占据宽度的100%。inline-block不会 */
 	margin-top: 30px;
 	text-align:center;
-	-o-transition:all 0.5s;
 	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
 	transition:all 0.5s;
 }
 .product-text a:hover{
@@ -363,11 +369,14 @@ ul,li{
 	padding:50px 0;
 }
 .price-header h1{
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
 	transition: all 1s;
 }
 .price-package p{
 	background:#82ca9c;
-	border-radius: 50px;
+	-moz-border-radius: 50px;
+	     border-radius: 50px;
 	width: 250px;
 	height:45px;
 	display: table;
@@ -390,49 +399,75 @@ ul,li{
 	position: absolute;
 	top:0;
 	left: 0;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
 	transition: all 1s;
 }
 .price-package p #lab-two{
 	position: absolute;
 	top:0;
 	left:125px;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
 	transition: all 1s;
 }
 #sp{
 	background-color:#0c1f28;
 	width:123px;
 	height:40px;
-	border-radius: 25px;
+	-moz-border-radius: 25px;
+	     border-radius: 25px;
 	z-index: 1;
 	display: table;
 	position:absolute;
 	top:2.5px;
 	left: 2px; 
-	transition: all 0.5s;           /*z-index只在定位元素上有用,可以查询z-index失效问题*/
+	-webkit-transition: all 0.5s; 
+	-moz-transition: all 0.5s; 
+	transition: all 0.5s; 
+           /*z-index只在定位元素上有用,可以查询z-index失效问题*/
 }
                               /*hover属性控制兄弟元素要加+号(注释注意不要放在样式中！！！)*/
 /* #lab-one:hover + #sp{ 
 	transform: translateX(125px);
 } */
+.rotate3d {
+	-webkit-perspective: 1000px;
+	   -moz-perspective: 1000px;
+	        perspective: 1000px;
+	-webkit-perspective-origin: 50% 50%;
+	   -moz-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+}
 
 #price-content,#popular-content,#premire-content{
 
 	/*position: relative;*/
-	transition:all 0.5s;
+	-webkit-transition:all .5s linear;
+	-moz-transition:all .5s linear;
+	transition:all .5s linear;
 	/*transform-origin: center;*/
 	text-align: center;
     outline: 1px solid #ededed;
     margin-top:25px;
 
+    /*3d属性无效？？？添加父类作为3d场景可以（原理以及实现有点问题）*/
+
 }
 
 #basic-show,#basic-hidden,#popular-show,#popular-hidden,#premire-show,#premire-hidden,{
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
 	transition:all 0.5s;
 	/*backface-visibility:hidden;*/
 	/*position: absolute;*/
 	display: block;
 	text-align: center;
 	list-style: none;
+
 }
 .basic-top,.premire-top,.popular-top{
 	border:1.5px solid #82ca9c;
@@ -465,7 +500,9 @@ ul,li{
 	margin-right: 2px;
 }
 #basic-hidden,#popular-hidden,#premire-hidden{
-	transform:/* translateY(0%) */ rotateY(180deg);
+    -webkit-transform:/* translateY(0%) */ rotateY(180deg);
+       -moz-transform:/* translateY(0%) */ rotateY(180deg);
+            transform:/* translateY(0%) */ rotateY(180deg);
 	/*backface-visibility:hidden;*/
 	/*position: absolute;*/
 	/*top:0;*/
@@ -496,6 +533,8 @@ ul,li{
 	font-size: 16px;
 	color:#fff;
 	font-weight: 500;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
 	transition: all 1s;
 }
 .basic-bom a:hover,.popular-bom a:hover,.premire-bom a:hover{
@@ -527,13 +566,19 @@ ul,li{
 	border:1px solid #ededed;
 	background: #fff;
 	padding:0 15px;
-	box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
+	-webkit-box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
+	   -moz-box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
+	        box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
 	transition:all 0.5s;
 }
 .businessContent .glyphicon{
 	font-size: 60px;
 	color:#82ca9c;
 	padding-top:25px;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
 	transition:all 0.5s;
 }
 .businessContent .divider{
@@ -541,12 +586,16 @@ ul,li{
 	padding:1px;
 	background:#ededed;
 	margin:25px auto 0;
-	transition:all 0.5s; 
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	transition:all 0.5s;
 }
 .businessContent h4 {
 	color: #000;
 	padding-top:25px;
 	font-weight: 600;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
 	transition:all 0.5s;
 }
 
@@ -555,6 +604,8 @@ ul,li{
 	color:#777777;
 	font-size: 14px;
 	line-height: 17px;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
 	transition:all 0.5s;
 }
 
@@ -600,11 +651,14 @@ ul,li{
 	float:right;
 }
 .contactForm .form-control{
-	border-radius: 0px;
+	-moz-border-radius: 0px;
+	     border-radius: 0px;
 }
 .contactForm .form-control:focus{
 	border-color:#82ca9c;
-	box-shadow: 0 0 8px #82ca9c;
+	-webkit-box-shadow: 0 0 8px #82ca9c;
+	   -moz-box-shadow: 0 0 8px #82ca9c;
+	        box-shadow: 0 0 8px #82ca9c;
 }
 
 .contactForm input[type="text"] {
@@ -618,6 +672,8 @@ ul,li{
 	color:#ededed;
 	border:none;
 	font-size: 17px;
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
 	transition:all 0.3s;
 }
 .contactForm input[type="submit"]:hover{
@@ -659,13 +715,18 @@ ul,li{
 .formMessages .contactWay li a {
 	padding: 12px;
 	border: 1px solid #565656;
-	border-radius: 50%;
+	-moz-border-radius: 50%;
+	     border-radius: 50%;
 	margin-right: 10px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
 .formMessages .contactWay li a i {
 	color: #000;
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
 	transition:all 0.3s;
 }
 .formMessages .contactWay li a:hover i{
@@ -698,18 +759,27 @@ ul,li{
 .footerBottom-item input{
 	height:40px;
 	display: inline-block;
+	-webkit-transition:all 1s;
+	-moz-transition:all 1s;
 	transition:all 1s;
 	width:58%;
 }
 .footerBottom-item input:focus{
 	border-color:#82ca9c;
-	box-shadow: 0 0 8px #82ca9c;
+	-webkit-box-shadow: 0 0 8px #82ca9c;
+	   -moz-box-shadow: 0 0 8px #82ca9c;
+	        box-shadow: 0 0 8px #82ca9c;
 }
 .footerBottom-item a{
 	padding:12px 12px;
 	color:#ededed;
 	display: inline-block;
-	transform: translateX(-12px);
+    -webkit-transform: translateX(-12px);
+       -moz-transform: translateX(-12px);
+        -ms-transform: translateX(-12px);
+            transform: translateX(-12px);
+	-webkit-transition:all 1s;
+	-moz-transition:all 1s;
 	transition:all 1s;
 	background:#82ca9c; 
 }
@@ -747,7 +817,10 @@ ul,li{
 	width:100%;
 	}
 	.footerBottom-item a{
-	transform: translateX(-12px);
+    -webkit-transform: translateX(-12px);
+       -moz-transform: translateX(-12px);
+        -ms-transform: translateX(-12px);
+            transform: translateX(-12px);
 	padding:12px 8px;
 	}
 }

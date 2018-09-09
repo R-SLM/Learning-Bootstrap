@@ -200,7 +200,7 @@
 						<p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
 					</div>
 				</div>
-				<div class="col-md-12">
+				<div class="col-md-12 rotate3d">
 					<div class="price-package">
 						<P>
 							<label id="lab-one" onclick="moveleft();rotateback();hiddenhiddelay()">Business</label>
@@ -539,42 +539,50 @@
 	<script type="text/javascript">
 		function moveleft(){
 			var sp = document.getElementById("sp");
-			sp.style.webkitTransform="translateX(0px)";
+			sp.style.transform="translateX(0px)";
+			sp.style.MozTransform="translateX(0px)";
 		}
 
 		function moveright(){
 			var sp = document.getElementById("sp");
-			sp.style.webkitTransform="translateX(123px)";
+			sp.style.transform="translateX(123px)";
+			sp.style.MozTransform="translateX(123px)";
 		}
 
 		function rotateto(){
 			var pricecontent = document.getElementById("price-content");
-			pricecontent.style.webkitTransform="rotateY(180deg)";
+			pricecontent.style.transform="rotateY(180deg)";
+			pricecontent.style.MozTransform="rotateY(180deg)";
 
 			var popularcontent = document.getElementById("popular-content");
-			popularcontent.style.webkitTransform="rotateY(180deg)";
+			popularcontent.style.transform="rotateY(180deg)";
+			popularcontent.style.MozTransform="rotateY(180deg)";
 			/*setTimeout("rotatetoBack()",100);*/
 
 			var premirecontent = document.getElementById("premire-content");
-			premirecontent.style.webkitTransform="rotateY(180deg)";
+			premirecontent.style.transform="rotateY(180deg)";
+			premirecontent.style.MozTransform="rotateY(180deg)";
 		}
 /*		function rotatetoBack(){
-			popularcontent.style.webkitTransform="rotateY(180deg)";
+			popularcontent.style.transform="rotateY(180deg)";
 		}*/
 
 		function rotateback(){
 			var pricecontent = document.getElementById("price-content");
-			pricecontent.style.webkitTransform="rotateY(0deg)";
+			pricecontent.style.transform="rotateY(0deg)";
+			pricecontent.style.MozTransform="rotateY(0deg)";
 
 			var popularontent = document.getElementById("popular-content");
-			popularontent.style.webkitTransform="rotateY(0deg)";
+			popularontent.style.transform="rotateY(0deg)";
+			popularontent.style.MozTransform="rotateY(0deg)";
 
 			var premirecontent = document.getElementById("premire-content");
-			premirecontent.style.webkitTransform="rotateY(0deg)";
+			premirecontent.style.transform="rotateY(0deg)";
+			premirecontent.style.MozTransform="rotateY(0deg)";
 		}
 
 		function hiddenshowdelay() {
-			setTimeout("hiddenshow()",50);  /*(hiddenshow,1500);*/
+			setTimeout("hiddenshow()",250);  /*(hiddenshow,1500);*/
 		}
 
 		function hiddenshow() {
@@ -596,7 +604,7 @@
 		}
 		
 		function hiddenhiddelay() {
-			setTimeout("hiddenhid()",50);   /*(hiddenhid,1500);*/
+			setTimeout("hiddenhid()",250);   /*(hiddenhid,1500);*/
 		}
 
 		function hiddenhid(){
